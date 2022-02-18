@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "5b286260-9f71-4d2b-9e87-76787a1a44c8",
+		"name": "Fare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wallet Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "card_number",
+							"value": "8608039205",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "20",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.119:8095/api/wallet",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"119"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cardnumber",
+							"value": "9841215844",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.119:8095/api/wallet/get",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"119"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"wallet",
+						"get"
+					],
+					"query": [
+						{
+							"key": "card_number",
+							"value": "12345678",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "cardnumber",
+							"value": "9841215844",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.119:8095/api/wallet/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"119"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"wallet",
+						"update"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "21",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_station",
+							"value": "Hamilton",
+							"type": "text"
+						},
+						{
+							"key": "to_station",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mode",
+							"value": "bus",
+							"type": "text"
+						},
+						{
+							"key": "card_number",
+							"value": "9841215844",
+							"type": "text"
+						},
+						{
+							"key": "intermediate_station",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "fare_charged",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8095/api/travel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"travel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "travel get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cardnumber",
+							"value": "9841215844",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.119:8095/api/travel/get",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"119"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"travel",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "travel update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_station",
+							"value": "Hamilton",
+							"type": "text"
+						},
+						{
+							"key": "to_station",
+							"value": "Slyder Falls",
+							"type": "text"
+						},
+						{
+							"key": "mode",
+							"value": "bus",
+							"type": "text"
+						},
+						{
+							"key": "fare_charged",
+							"value": "2.5",
+							"type": "text"
+						},
+						{
+							"key": "card_number",
+							"value": "9841215844",
+							"type": "text"
+						},
+						{
+							"key": "travel_id",
+							"value": "da475ec2-b4ba-4861-9ba7-7666cf043004",
+							"type": "text"
+						},
+						{
+							"key": "intermediate_station",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.119:8095/api/travel/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"119"
+					],
+					"port": "8095",
+					"path": [
+						"api",
+						"travel",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
